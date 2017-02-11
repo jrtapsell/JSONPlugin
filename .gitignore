@@ -1,0 +1,17 @@
+.metadata/**
+**/\.metadata/**
+**/workspace.xml
+**/*\.class
+
+**/\.project
+**/\.idea/**
+/\.idea/**
+
+plugin/\.idea/
+**/.gradle/**
+**/.settings/**
+**/.classpath
+**/.project
+**/build/**
+**/.idea/**
+**/bin/**

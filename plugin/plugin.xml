@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="jsonviewer.editors.JSONEditor"
+            extensions="json"
+            icon="icons/json-file.png"
+            id="jsonviewer.editors.JSONEditor"
+            name="Sample XML Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.core.filebuffers.documentSetup">
+      <participant
+            class="jsonviewer.setup.DocumentSetupParticipant"
+            extensions="json">
+      </participant>
+   </extension>
+
+</plugin>
