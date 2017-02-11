@@ -46,8 +46,13 @@ public class JSONPartitioner implements IDocumentPartitioner {
   }
 
   private void reparse() {
+    final String text = document.get();
+    if (text == null || "".equals(text)) {
+      data = null;
+      return;
+    }
     try {
-      data = Json.parseString(document.get());
+      data = Json.parseString(text);
     } catch (LocatedJsonException ex) {
       data = null;
     }
