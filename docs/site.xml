@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/JSON_Viewer_1.0.0.qualifier.jar" id="JSON_Viewer" version="1.0.0.qualifier"/>
+   <feature url="features/JSON_Viewer_1.0.0.201702112313.jar" id="JSON_Viewer" version="1.0.0.201702112313"/>
 </site>
