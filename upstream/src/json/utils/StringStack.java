@@ -3,7 +3,6 @@ package json.utils;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * A string with a stacklike interface.
@@ -16,11 +15,11 @@ public class StringStack {
   private final List<Integer> lines;
   private static final String LINE_SEPARATOR = System.lineSeparator();
 
-  public StringStack(final @NotNull String text) {
+  public StringStack(final  String text) {
     this(text, 0);
   }
 
-  private StringStack(final @NotNull String text, final int i) {
+  private StringStack(final  String text, final int i) {
     this.text = text;
     index = i;
     lines = calculateLines(text);
@@ -54,7 +53,7 @@ public class StringStack {
    * @return
    *  true iff the next part of the string is equal to text.
    */
-  public boolean isNext(final @NotNull CharSequence text) {
+  public boolean isNext(final  CharSequence text) {
     final int length = text.length();
     if (length + index > this.text.length()) {
       return false;
@@ -71,7 +70,7 @@ public class StringStack {
     return available() == 0;
   }
 
-  public void consume(final @NotNull CharSequence text) {
+  public void consume(final  CharSequence text) {
     consume(text.length());
   }
 
@@ -100,7 +99,7 @@ public class StringStack {
     }
   }
 
-  private static List<Integer> calculateLines(final @NotNull String text) {
+  private static List<Integer> calculateLines(final  String text) {
     final List<Integer> newLines = new ArrayList<>();
     newLines.add(0);
     for (int i = 0; i + LINE_SEPARATOR.length() < text.length(); i++) {

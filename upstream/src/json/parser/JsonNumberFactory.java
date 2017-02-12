@@ -7,7 +7,6 @@ import json.utils.JsonTreeElement;
 import json.utils.LocatedJsonException;
 import json.utils.Partition;
 import json.utils.StringStack;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Factory for JSONElements of types Number (int or float).
@@ -25,9 +24,9 @@ public final class JsonNumberFactory implements JsonElementFactory {
 
   @Override
   public void read(
-      final @NotNull List<Partition> partitions,
-      final @NotNull StringStack stack,
-      final @NotNull JsonTreeElement parent) throws LocatedJsonException {
+      final  List<Partition> partitions,
+      final  StringStack stack,
+      final  JsonTreeElement parent) throws LocatedJsonException {
     boolean decimal = false; // Only allow a decimal once
     final int startIndex = stack.getIndex();
     if (stack.peek() == '-') {
@@ -60,7 +59,7 @@ public final class JsonNumberFactory implements JsonElementFactory {
   }
 
   @Override
-  public boolean isNext(final @NotNull StringStack stack) {
+  public boolean isNext(final  StringStack stack) {
     return Character.isDigit(stack.peek()) || stack.peek() == '.' || stack.peek() == '-';
   }
 }

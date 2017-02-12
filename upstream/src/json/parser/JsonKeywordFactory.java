@@ -8,7 +8,6 @@ import json.utils.JsonTreeElement;
 import json.utils.LocatedJsonException;
 import json.utils.Partition;
 import json.utils.StringStack;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Factory for JSONElements of types Boolean or Null.
@@ -26,7 +25,7 @@ public final class JsonKeywordFactory implements JsonElementFactory {
   private JsonKeywordFactory() {}
 
   @Override
-  public boolean isNext(final @NotNull StringStack stack) {
+  public boolean isNext(final  StringStack stack) {
     return stack.isNext("true")
         || stack.isNext("false")
         || stack.isNext("null");
@@ -34,9 +33,9 @@ public final class JsonKeywordFactory implements JsonElementFactory {
 
   @Override
   public void read(
-      final @NotNull List<Partition> partitions,
-      final @NotNull StringStack stack,
-      final @NotNull JsonTreeElement parent) throws LocatedJsonException {
+      final  List<Partition> partitions,
+      final  StringStack stack,
+      final  JsonTreeElement parent) throws LocatedJsonException {
     if (checkKeyword(partitions, stack, "true", ContentType.BOOLEAN, parent)) {
       return;
     }
@@ -50,11 +49,11 @@ public final class JsonKeywordFactory implements JsonElementFactory {
   }
 
   private static boolean checkKeyword(
-      final @NotNull Collection<Partition> partitions,
-      final @NotNull StringStack ss,
-      final @NotNull CharSequence keyword,
-      final @NotNull ContentType type,
-      final @NotNull JsonTreeElement root) {
+      final  Collection<Partition> partitions,
+      final  StringStack ss,
+      final  CharSequence keyword,
+      final  ContentType type,
+      final  JsonTreeElement root) {
     if (ss.isNext(keyword)) {
       final int start = ss.getIndex();
       final int end = start + keyword.length();

@@ -1,7 +1,5 @@
 package json.utils;
 
-import org.jetbrains.annotations.NotNull;
-
 /**
  * An error in a JSON string, with the index that it occured.
  *
@@ -11,8 +9,8 @@ public class LocatedJsonException extends Exception {
   private final int position;
 
   public LocatedJsonException(
-      final @NotNull String text,
-      final @NotNull StringStack stack) {
+      final  String text,
+      final  StringStack stack) {
     this(text, stack, stack.getIndex());
   }
 
@@ -27,8 +25,8 @@ public class LocatedJsonException extends Exception {
    *  The position of the error.
    */
   public LocatedJsonException(
-      final @NotNull String test,
-      final @NotNull StringStack stack,
+      final  String test,
+      final  StringStack stack,
       final int position) {
     super(String.format(
         "%s%s%s",
@@ -43,7 +41,7 @@ public class LocatedJsonException extends Exception {
     return position;
   }
 
-  private static String getLineDisplay(final @NotNull StringStack ss, final int position) {
+  private static String getLineDisplay(final  StringStack ss, final int position) {
     final int lineStart = ss.lineStart(position);
     final String line = ss.getLine(position);
     final int offset = position - lineStart;

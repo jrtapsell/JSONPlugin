@@ -7,7 +7,6 @@ import json.utils.JsonTreeElement;
 import json.utils.LocatedJsonException;
 import json.utils.Partition;
 import json.utils.StringStack;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Factory for JSONElements of type Array.
@@ -25,9 +24,9 @@ public final class JsonArrayFactory implements JsonElementFactory {
 
   @Override
   public void read(
-      final @NotNull List<Partition> partitions,
-      final @NotNull StringStack stack,
-      final @NotNull JsonTreeElement parent) throws LocatedJsonException {
+      final List<Partition> partitions,
+      final StringStack stack,
+      final JsonTreeElement parent) throws LocatedJsonException {
     int startIndex = stack.getIndex();
     final JsonTreeElement jte = new JsonTreeElement(ContentType.ARRAY, startIndex);
     parent.addChild(jte);
@@ -53,7 +52,7 @@ public final class JsonArrayFactory implements JsonElementFactory {
   }
 
   @Override
-  public boolean isNext(final @NotNull StringStack stack) {
+  public boolean isNext(final  StringStack stack) {
     return stack.peek() == '[';
   }
 }

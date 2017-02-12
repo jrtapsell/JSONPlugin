@@ -2,8 +2,6 @@ package json.utils;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * An element in a parsed JSON string, with tree structure intact.
@@ -26,7 +24,7 @@ public class JsonTreeElement {
    *  The start index of the tree element
    */
   public JsonTreeElement(
-      final @Nullable ContentType type,
+      final ContentType type,
       final int startIndex) {
     this.type = type;
     this.startIndex = startIndex;
@@ -53,7 +51,7 @@ public class JsonTreeElement {
     return text;
   }
 
-  public void addChild(@NotNull JsonTreeElement element) {
+  public void addChild( JsonTreeElement element) {
     children.add(element);
   }
 

@@ -10,8 +10,6 @@ import json.utils.JsonTreeElement;
 import json.utils.LocatedJsonException;
 import json.utils.Partition;
 import json.utils.StringStack;
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * The Json Parser.
@@ -40,9 +38,8 @@ public final class Json {
    * @throws LocatedJsonException
    *  Thrown if the JSON is invalid
    */
-  @Contract("_ -> !null")
   public static Pair<List<Partition>, JsonTreeElement> parseString(
-      final @NotNull String text) throws LocatedJsonException {
+      final  String text) throws LocatedJsonException {
     final List<Partition> partitions = new ArrayList<>();
     final StringStack ss = new StringStack(text);
     consumeWhitespace(partitions, ss);
@@ -57,9 +54,9 @@ public final class Json {
 
 
   static void parseAny(
-      final @NotNull List<Partition> partitions,
-      final @NotNull StringStack ss,
-      final @NotNull JsonTreeElement root) throws LocatedJsonException {
+      final  List<Partition> partitions,
+      final  StringStack ss,
+      final  JsonTreeElement root) throws LocatedJsonException {
     for (final JsonElementFactory factory : FACTORIES) {
       if (factory.isNext(ss)) {
         factory.read(partitions, ss, root);
@@ -73,8 +70,8 @@ public final class Json {
   }
 
   private static void consumeWhitespace(
-      final @NotNull Collection<Partition> partitions,
-      final @NotNull StringStack ss) {
+      final  Collection<Partition> partitions,
+      final  StringStack ss) {
     if (ss.isAvailable() && Character.isWhitespace(ss.peek())) {
       final int startIndex = ss.getIndex();
       ss.seekWhitespace();

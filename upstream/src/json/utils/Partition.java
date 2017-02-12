@@ -1,8 +1,6 @@
 package json.utils;
 
 import java.util.Objects;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * An element in a JSON string, flattened.
@@ -36,7 +34,7 @@ public class Partition {
    * @param type
    *  The type
    */
-  public Partition(final int start, final int end, final @NotNull ContentType type) {
+  public Partition(final int start, final int end, final  ContentType type) {
     this.start = start;
     this.end = end;
     name = type.name();
@@ -54,7 +52,7 @@ public class Partition {
   }
 
   @Override
-  public boolean equals(final @Nullable Object obj) {
+  public boolean equals(final Object obj) {
     if (this == obj) {
       return true;
     }

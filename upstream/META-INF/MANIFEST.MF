@@ -2,22 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JSONParser
 Bundle-SymbolicName: JSONParser
-Bundle-Version: 1.1.0
+Bundle-Version: 1.2.1
 Bundle-ClassPath: .
 Bundle-Vendor: jrtapsell
-Export-Package: build.classes.main,
- build.classes.main.json.parser,
- build.classes.main.json.utils,
- build.classes.test.json,
- build.classes.test.json.types,
- build.classes.test.utils,
+Export-Package: 
  json.parser,
- json.utils,
- out.production.JSONParser,
- out.production.JSONParser.json.parser,
- out.production.JSONParser.json.utils,
- out.test.JSONParser.json,
- out.test.JSONParser.json.types,
- out.test.JSONParser.utils
+ json.utils
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: javafx.util;version="2.2.0"

@@ -7,7 +7,6 @@ import json.utils.JsonTreeElement;
 import json.utils.LocatedJsonException;
 import json.utils.Partition;
 import json.utils.StringStack;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Factory for JSONElements of type String.
@@ -25,9 +24,9 @@ public final class JsonStringFactory implements JsonElementFactory {
 
   @Override
   public void read(
-      final @NotNull List<Partition> partitions,
-      final @NotNull StringStack stack,
-      final @NotNull JsonTreeElement tree) throws LocatedJsonException {
+      final  List<Partition> partitions,
+      final  StringStack stack,
+      final  JsonTreeElement tree) throws LocatedJsonException {
     final int startIndex = stack.getIndex();
     stack.pop();
     boolean escaped = false;
@@ -44,7 +43,7 @@ public final class JsonStringFactory implements JsonElementFactory {
   }
 
   @Override
-  public boolean isNext(final @NotNull StringStack stack) {
+  public boolean isNext(final  StringStack stack) {
     return stack.peek() == '"';
   }
 }
