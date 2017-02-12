@@ -17,6 +17,10 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import plugin="org.eclipse.fx.javafx"/>
+   </requires>
+
    <plugin
          id="JSONParser"
          download-size="0"

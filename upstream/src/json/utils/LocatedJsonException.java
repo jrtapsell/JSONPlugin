@@ -6,7 +6,8 @@ package json.utils;
  * @author James Tapsell
  */
 public class LocatedJsonException extends Exception {
-  private final int position;
+	private static final long serialVersionUID = 2641736031325250290L;
+	private final int position;
 
   public LocatedJsonException(
       final  String text,
@@ -33,7 +34,6 @@ public class LocatedJsonException extends Exception {
         test,
         System.lineSeparator(),
         getLineDisplay(stack, position)));
-    final StringStack ss = stack;
     this.position = position;
   }
 

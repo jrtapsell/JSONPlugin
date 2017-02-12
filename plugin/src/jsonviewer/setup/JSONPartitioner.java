@@ -1,10 +1,7 @@
 package jsonviewer.setup;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import javafx.util.Pair;
 import javafx.util.Pair;
 import json.parser.Json;
 import json.utils.JsonTreeElement;
@@ -54,7 +51,7 @@ public class JSONPartitioner implements IDocumentPartitioner {
     }
     try {
       data = Json.parseString(text);
-    } catch (LocatedJsonException ex) {
+    } catch (LocatedJsonException | StringIndexOutOfBoundsException ex) {
       data = null;
     }
     System.out.println("Parsed");
@@ -86,6 +83,9 @@ public class JSONPartitioner implements IDocumentPartitioner {
 
   @Override
   public ITypedRegion getPartition(int i) {
+	if (data == null) {
+		return new TypedRegion(i, 0, UNDEFINED);
+	}
     final Partition partition = data.getKey().stream()
         .filter(p -> p.getEnd() > i)
         .filter(p -> p.getStart() <= i)
