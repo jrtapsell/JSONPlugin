@@ -35,6 +35,7 @@ public class LocatedJsonException extends Exception {
         System.lineSeparator(),
         getLineDisplay(stack, position)));
     this.position = position;
+
   }
 
   public int getPosition() {

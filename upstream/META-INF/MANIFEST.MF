@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JSONParser
 Bundle-SymbolicName: JSONParser
-Bundle-Version: 1.2.2
+Bundle-Version: 1.2.3.dev
 Bundle-ClassPath: .
 Bundle-Vendor: jrtapsell
 Export-Package: 
