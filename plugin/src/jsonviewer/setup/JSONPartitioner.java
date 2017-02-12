@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javafx.util.Pair;
+import javafx.util.Pair;
 import json.parser.Json;
 import json.utils.JsonTreeElement;
 import json.utils.LocatedJsonException;

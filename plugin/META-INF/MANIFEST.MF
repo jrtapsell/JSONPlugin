@@ -8,8 +8,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.jface.text,
  org.eclipse.ui.editors,
- JSONParser;bundle-version="1.0.0",
- org.eclipse.fx.javafx;bundle-version="2.2.0"
+ org.eclipse.fx.javafx;bundle-version="2.2.0",
+ JSONParser;bundle-version="1.2.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: Jrtapsell
+Import-Package: json.utils
