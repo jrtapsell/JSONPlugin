@@ -2,7 +2,7 @@
 <feature
       id="JSON_Viewer"
       label="JSON_Viewer"
-      version="1.0.4.qualifier"
+      version="1.0.5.qualifier"
       provider-name="Jrtapsell">
 
    <description url="http://www.example.com/description">
@@ -22,13 +22,6 @@
    </requires>
 
    <plugin
-         id="JSONParser"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="JsonViewer"
          download-size="0"
          install-size="0"
@@ -37,6 +30,12 @@
 
    <plugin
          id="uk.co.jrtapsell.javafx.plugin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="uk.co.jrtapsell.json.provider"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
