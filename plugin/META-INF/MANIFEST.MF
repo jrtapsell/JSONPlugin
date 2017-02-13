@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JsonViewer
 Bundle-SymbolicName: JsonViewer;singleton:=true
-Bundle-Version: 1.1.7.dev
+Bundle-Version: 1.1.8.dev
 Bundle-Activator: jsonviewer.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.jface.text,
  org.eclipse.ui.editors,
- org.eclipse.fx.javafx;bundle-version="2.2.0",
- JSONParser;bundle-version="1.2.1"
+ JSONParser;bundle-version="1.2.1",
+ uk.co.jrtapsell.javafx.plugin;bundle-version="1.8.40"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: Jrtapsell

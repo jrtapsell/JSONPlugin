@@ -2,7 +2,7 @@
 <feature
       id="JSON_Viewer"
       label="JSON_Viewer"
-      version="1.0.3.qualifier"
+      version="1.0.4.qualifier"
       provider-name="Jrtapsell">
 
    <description url="http://www.example.com/description">
@@ -34,5 +34,11 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="uk.co.jrtapsell.javafx.plugin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
 </feature>
