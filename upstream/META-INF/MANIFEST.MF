@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JSON Parser Provider
 Bundle-SymbolicName: uk.co.jrtapsell.json.provider
-Bundle-Version: 2.0.0
+Bundle-Version: 2.0.1
 Bundle-ClassPath: .
 Bundle-Vendor: Jrtapsell
 Export-Package: build.classes.main,
@@ -12,3 +12,4 @@ Export-Package: build.classes.main,
  out.production.JSONParser,
  out.test.JSONParser.json
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: uk.co.jrtapsell.javafx.plugin;bundle-version="1.8.40"
