@@ -9,7 +9,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jface.text,
  org.eclipse.ui.editors,
  uk.co.jrtapsell.javafx.plugin;bundle-version="1.8.40",
- uk.co.jrtapsell.json.provider;bundle-version="1.0.0"
+ uk.co.jrtapsell.json.provider;bundle-version="2.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: Jrtapsell
