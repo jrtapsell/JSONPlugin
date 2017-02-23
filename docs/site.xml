@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/JSON_Viewer_1.0.5.201702141213.jar" id="JSON_Viewer" version="1.0.5.201702141213">
-      <category name="JSON"/>
+   <feature url="features/DotFeature_1.0.1.201702121731.jar" id="DotFeature" version="1.0.1.201702121731">
+      <category name="uk.co.jrtapsell.dotviewer.catagory"/>
    </feature>
-   <category-def name="JSON" label="JSON Viewer"/>
+   <category-def name="uk.co.jrtapsell.dotviewer.catagory" label="Dot Viewer"/>
 </site>
