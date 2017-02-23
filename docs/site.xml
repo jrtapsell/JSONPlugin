@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/DotFeature_1.0.1.201702121731.jar" id="DotFeature" version="1.0.1.201702121731">
+   <feature url="features/JSON_Viewer_1.0.5.201702231028.jar" id="JSON_Viewer" version="1.0.5.201702231028">
       <category name="uk.co.jrtapsell.jsonviewer.catagory"/>
    </feature>
    <category-def name="uk.co.jrtapsell.jsonviewer.catagory" label="JSON Viewer"/>
